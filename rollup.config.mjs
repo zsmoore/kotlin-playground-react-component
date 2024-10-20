@@ -15,7 +15,6 @@ export default [
         sourcemap: true,
       },
     ],
-    external: ['react-dom', 'kotlin-playground'],
     plugins: [
       resolve(),
       commonjs(),

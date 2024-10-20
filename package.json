@@ -1,6 +1,6 @@
 {
   "name": "kotlin-playground-react-component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React component for kotlin playground",
   "repository": "https://github.com/zsmoore/kotlin-playground-react-component",
   "author": "Zachary Moore <zsmoore@zachary-moore.com>",
@@ -14,10 +14,7 @@
     "prettier:fix": "npm run prettier -- --write",
     "test": "jest"
   },
-  "dependencies": {
-    "kotlin-playground": "^1.30.0",
-    "react": "^18.3.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.25.8",
     "@babel/preset-env": "^7.25.8",
@@ -45,7 +42,9 @@
     "globals": "^15.11.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "kotlin-playground": "^1.30.0",
     "prettier": "^3.3.3",
+    "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rollup": "^4.24.0",
     "rollup-plugin-delete": "^2.1.0",
