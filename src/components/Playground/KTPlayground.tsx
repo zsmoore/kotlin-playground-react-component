@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import playground from 'kotlin-playground';
 
 export interface KTPlaygroundProps {
@@ -9,11 +9,11 @@ const KTPLayground = (props: KTPlaygroundProps) => {
   useEffect(() => {
     playground('code');
   });
-  return <div>
-    <code>
-      {props.code}
-    </code>
-  </div>
-}
+  return (
+    <div>
+      <code>{props.code}</code>
+    </div>
+  );
+};
 
-export default KTPLayground
+export default KTPLayground;

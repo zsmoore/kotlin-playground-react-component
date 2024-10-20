@@ -1,1 +1,1 @@
-export { default as KTPlayground } from './KTPlayground';
+export { default as KTPlayground } from './Playground';
