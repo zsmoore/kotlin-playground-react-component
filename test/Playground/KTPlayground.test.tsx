@@ -11,7 +11,7 @@ afterEach(() => {
   cleanup();
 });
 
-describe('Button Component', () => {
+describe('KTPlayground Component', () => {
   const { container } = render(<KTPlayground code="test" />);
 
   test('Code Rendering', () => {
