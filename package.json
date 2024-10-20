@@ -15,7 +15,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "kotlin-playground": "^1.30.0"
+    "kotlin-playground": "^1.30.0",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.8",
