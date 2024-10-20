@@ -12,10 +12,10 @@ afterEach(() => {
 });
 
 describe('KTPlayground Component', () => {
-  const { container } = render(<KTPlayground code="test" />);
+  const { container } = render(<KTPlayground>test</KTPlayground>);
 
   test('Code Rendering', () => {
-    const code = container.querySelector('code');
+    const code = container.querySelector('div');
     expect(code).toHaveTextContent('test');
   });
 });
