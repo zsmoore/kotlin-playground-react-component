@@ -4,7 +4,7 @@
 
 import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { KTPlayground } from '../../src';
+import KTPlayground from '../../src';
 import React from 'react';
 
 afterEach(() => {

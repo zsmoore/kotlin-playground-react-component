@@ -6,7 +6,7 @@ export interface KTPlaygroundProps {
   darkMode?: boolean;
 }
 
-const KTPLayground = (props: PropsWithChildren<KTPlaygroundProps>) => {
+const KTPlayground = (props: PropsWithChildren<KTPlaygroundProps>) => {
   const id = 'id' + uuidv4().toString();
   useEffect(() => {
     playground('.' + id, {
@@ -16,4 +16,4 @@ const KTPLayground = (props: PropsWithChildren<KTPlaygroundProps>) => {
   return <div className={id}>{props.children}</div>;
 };
 
-export default KTPLayground;
+export default KTPlayground;
