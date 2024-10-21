@@ -1,6 +1,3 @@
-/**
- *
- */
 export interface KTPlaygroundProps {
   /**
    * Show expander if height more than value
