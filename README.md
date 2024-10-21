@@ -57,6 +57,23 @@ Here is some more markdown
 ````
 Our plugin will preserve newlines and tabbing in the markdown context.
 
+### Example output
+````jsx
+<KTPlayground theme={"darcula"}>
+```spaced
+fun abc() {
+  println("abc");
+}
+
+fun main() {
+  abc()
+}
+```
+</KTPlayground>
+````
+<img width="806" alt="Screenshot 2024-10-20 at 11 06 42 PM" src="https://github.com/user-attachments/assets/37aefaf3-837b-4150-8e04-386d717f6b31">
+
+
 ## Prop Types
 All available configurations are usable via props.
 
