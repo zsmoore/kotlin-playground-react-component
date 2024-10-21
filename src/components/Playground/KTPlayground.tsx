@@ -21,7 +21,7 @@ const KTPlayground = (props: PropsWithChildren<KTPlaygroundProps>) => {
     'div',
     {
       className: id,
-      ...convertPropsToAttrs(props),
+      ...Object.fromEntries(convertPropsToAttrs(props)),
     },
     children,
   );

@@ -13,7 +13,7 @@ afterEach(() => {
 
 describe('KTPlayground Component', () => {
   test('Code Rendering', () => {
-    const { container } = render(<KTPlayground>test</KTPlayground>);
+    const { container } = render(<KTPlayground theme='darcula'>test</KTPlayground>);
     const code = container.querySelector('div');
     expect(code).toHaveTextContent('test');
   });
