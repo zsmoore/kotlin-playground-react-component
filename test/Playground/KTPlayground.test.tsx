@@ -12,10 +12,29 @@ afterEach(() => {
 });
 
 describe('KTPlayground Component', () => {
-  const { container } = render(<KTPlayground>test</KTPlayground>);
-
   test('Code Rendering', () => {
+    const { container } = render(<KTPlayground>test</KTPlayground>);
     const code = container.querySelector('div');
     expect(code).toHaveTextContent('test');
+  });
+
+  test('Code rendering with props', () => {
+    const { container } = render(
+      <KTPlayground
+        code={`
+      fun main() {
+        println("test");
+      }
+    `}
+      />,
+    );
+    const code = container.querySelector('div');
+    expect(code).toHaveTextContent('println("test");');
+  });
+
+  test('Setting code and children throws', () => {
+    expect(() =>
+      render(<KTPlayground code={`test`}>Test</KTPlayground>),
+    ).toThrow(Error);
   });
 });
