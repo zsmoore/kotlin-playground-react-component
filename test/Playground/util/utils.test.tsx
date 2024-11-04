@@ -8,11 +8,11 @@ import {
 describe('Playground Utils', () => {
   test('Props are converted to attributes', () => {
     const props: KTPlaygroundProps = {
-      matchBrackets: true,
+      highlightOnly: true,
     };
 
     const attributes: Map<string, unknown> = convertPropsToAttrs(props);
-    expect(attributes.get('match-brackets')).toEqual(true);
+    expect(attributes.get('data-highlight-only')).toEqual(true);
   });
 
   test('Props with same name stay the same', () => {
@@ -30,7 +30,7 @@ describe('Playground Utils', () => {
     };
     const attributes: Map<string, unknown> = convertPropsToAttrs(props);
     expect(attributes.get('theme')).toEqual('darcula');
-    expect(attributes.has('match-brackets')).toBeFalsy();
+    expect(attributes.has('data-highlight-only')).toBeFalsy();
   });
 
   test('Non Attr props are not included', () => {
@@ -52,5 +52,14 @@ describe('Playground Utils', () => {
     const options: PlaygroundOptions = getPlaygroundOptions(props);
     expect(options.server).toBe('myServer');
     expect(options.onCloseConsole).toBeUndefined();
+  });
+
+  test('Bool props that need converted are converted', () => {
+    const props: KTPlaygroundProps = {
+      lines: true,
+    };
+
+    const attributes: Map<string, unknown> = convertPropsToAttrs(props);
+    expect(attributes.get('lines')).toBe('true');
   });
 });
