@@ -31,6 +31,15 @@ export type PlaygroundOptions = Pick<
   | 'server'
 >;
 
+const boolToString = new Set<string>([
+  'foldedButton',
+  'lines',
+  'onFlyHighlight',
+  'autoComplete',
+  'matchBrackets',
+  'autoIndent',
+]);
+
 export function convertPropsToAttrs(
   props: KTPlaygroundProps,
 ): Map<string, unknown> {
@@ -38,7 +47,11 @@ export function convertPropsToAttrs(
   for (const entry of propToAttr.entries()) {
     const safeKey = entry[0] as keyof KTPlaygroundProps;
     if (props[safeKey]) {
-      attributes.set(entry[1], props[safeKey]);
+      if (boolToString.has(safeKey)) {
+        attributes.set(entry[1], props[safeKey].toString());
+      } else {
+        attributes.set(entry[1], props[safeKey]);
+      }
     }
   }
   return attributes;
