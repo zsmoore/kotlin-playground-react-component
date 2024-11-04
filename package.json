@@ -5,6 +5,13 @@
   "repository": "https://github.com/zsmoore/kotlin-playground-react-component",
   "author": "Zachary Moore <zsmoore@zachary-moore.com>",
   "license": "Apache-2.0",
+  "keywords": [
+    "react",
+    "kotlin",
+    "playground",
+    "component",
+    "TypeScript"
+  ],
   "scripts": {
     "rollup": "rollup -c",
     "fullBuild": "yarn run lint:fix && yarn run prettier:fix && yarn run test && yarn run rollup",
