@@ -1,3 +1,4 @@
+[![NPM version](https://img.shields.io/npm/v/kotlin-playground-react-component.svg)](https://www.npmjs.com/package/kotlin-playground-react-component)
 # kotlin-playground-react-component
 
 React wrapper around [Kotlin Playground](https://github.com/JetBrains/kotlin-playground).  
